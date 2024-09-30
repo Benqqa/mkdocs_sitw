@@ -1,7 +1,11 @@
 # Welcome to MkDocs
 
-### ТЕСТ 2
+### ТЕСТ 3
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+
+## Отчет по практическому заданию №1
+
+* [Установка и настройка](setup.md)
 
 ## Commands
 
