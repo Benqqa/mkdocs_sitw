@@ -17,8 +17,8 @@
 
 1. Создать виртуальное окружение:
     ```sh
-    python -m venv myenv
-    source myenv/bin/activate
+    virtualenv env
+    source env/bin/activate
     ```
 
 2. Установить MkDocs:
