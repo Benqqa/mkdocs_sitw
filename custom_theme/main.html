@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Документация по MkDocs - подробное руководство по использованию и настройке">
+    <meta name="author" content="Maxim Benyuh">
+    <meta name="keywords" content="MkDocs, документация, статический сайт, Python">
+    <meta name="application-name" content="MkDocs Custom Theme">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}">
+    <meta property="og:description" content="Документация по MkDocs - подробное руководство по использованию и настройке">
+    <meta property="og:type" content="website">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+    <link rel="stylesheet" href="{{ 'css/theme.css'|url }}">
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <div class="logo">CUSTOM MkDocs Site</div>
+            <ul class="nav-links">
+                {% for nav_item in nav %}
+                    <li><a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        {{ page.content }}
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2024 Maxim Benyuh. Все права защищены.</p>
+    </footer>
+
+    <script src="{{ 'js/theme.js'|url }}"></script>
+</body>
+</html>

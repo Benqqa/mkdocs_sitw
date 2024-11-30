@@ -21,9 +21,10 @@
     source env/bin/activate
     ```
 
-2. Установить MkDocs:
+2. Установить MkDocs и пакеты для обработки CSS:
     ```sh
     pip install mkdocs
+    npm install -g postcss postcss-cli autoprefixer cssnano
     ```
 
 ## Настройка GitHub Actions и GitHub Pages
