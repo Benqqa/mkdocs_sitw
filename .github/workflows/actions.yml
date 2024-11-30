@@ -25,16 +25,16 @@ jobs:
           pip install html5validator
           npm install -g postcss postcss-cli autoprefixer cssnano
 
-      - name: Validate HTML
-        run: |
-          html5validator --root site/
-
       - name: Process CSS
         run: |
           postcss custom_theme/css/*.css --dir site/css --use autoprefixer cssnano
 
       - name: Build MkDocs site
         run: mkdocs build
+
+      - name: Validate HTML
+        run: |
+          html5validator --root site/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
